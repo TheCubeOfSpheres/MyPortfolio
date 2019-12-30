@@ -1,2 +1,2 @@
-# MyPortfolio
-This is my professional portfolio
+# Joseph James's portfolio
+This is my professional portfolio.  It uses AWS and ReactJS.
