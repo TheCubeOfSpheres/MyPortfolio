@@ -1,13 +1,12 @@
 version: 0.1
-
-phases: 
-	build:
-	commands:
-	- echo Nothing to do yet
-artifiacts:
-	files:
-		-index.html
-		-favicon.ico
-		-JJamesResume.docx
-    -styles/*
-    -images/*
+ phases: 
+  build:
+ commands:
+  - echo Nothing to do yet
+ artifiacts:
+  files:
+   -index.html
+   -favicon.ico
+   -JJamesResume.docx
+   -styles/*
+   -images/*
