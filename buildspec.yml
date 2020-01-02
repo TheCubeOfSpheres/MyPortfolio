@@ -1,0 +1,12 @@
+version: 0.1
+phase: 
+	build:
+	commadns:
+	- echo Nothing to do yet
+artifiacts:
+	files:
+		-index.html
+		-favicon.ico
+		-JJamesResume.docx
+    -styles/*
+    -images/*
