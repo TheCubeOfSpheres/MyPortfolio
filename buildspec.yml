@@ -11,3 +11,4 @@ artifiacts:
    -JJamesResume.docx
    -styles/*
    -images/*
+   -aws s3 cp dist s3://portfoliobuild.architectsandbox.net/ --recursive
