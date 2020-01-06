@@ -9,9 +9,4 @@ phases:
       - echo Nothing to do yet
 artifiacts:
   files:
-   -index.html
-   -favicon.ico
-   -JJamesResume.docx
-   -server.js
-   -styles/*
-   -images/*
+   - '**/*'
