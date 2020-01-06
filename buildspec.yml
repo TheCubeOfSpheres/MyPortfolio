@@ -9,6 +9,6 @@ artifiacts:
    -index.html
    -favicon.ico
    -JJamesResume.docx
+   -server.js
    -styles/*
    -images/*
-   -aws s3 cp dist s3://portfoliobuild.architectsandbox.net/ --recursive
