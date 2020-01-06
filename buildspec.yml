@@ -10,4 +10,3 @@ phases:
 artifiacts:  
   files:
     - '**/*'
-  name: myname-$(date +%Y-%m-%d) 
