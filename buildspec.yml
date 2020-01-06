@@ -1,9 +1,12 @@
 version: 0.1
 
 phases:
- build:
-   commands:
-    - echo Nothing to do yet
+  install:
+    runtime-versions:
+      nodejs: 10
+  build:
+    commands:
+      - echo Nothing to do yet
 artifiacts:
   files:
    -index.html
