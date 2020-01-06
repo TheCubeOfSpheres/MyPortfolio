@@ -7,6 +7,7 @@ phases:
   build:
     commands:
       - echo Nothing to do yet
-artifiacts:
+artifiacts:  
   files:
-   - '**/*'
+    - '**/*'
+  name: myname-$(date +%Y-%m-%d) 
