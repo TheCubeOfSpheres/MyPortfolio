@@ -9,4 +9,4 @@ phases:
       - echo Nothing to do yet
 artifiacts:  
   files:
-    - index.html
+    - '**/*'
