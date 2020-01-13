@@ -1,0 +1,33 @@
+{
+  "name": "myportfolio",
+  "version": "1.0.0",
+  "description": "This is my professional portfolio.  It uses AWS and ReactJS.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "webpack": "webpack",
+    "webpack-watch": "webpack --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TheCubeOfSpheres/MyPortfolio.git"
+  },
+  "author": "Joseph James",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TheCubeOfSpheres/MyPortfolio/issues"
+  },
+  "homepage": "https://github.com/TheCubeOfSpheres/MyPortfolio#readme",
+  "dependencies": {
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.4",
+    "babel-preset-react": "^6.24.1",
+    "webpack": "^4.2.0",
+    "webpack-cli": "^2.0.13"
+  }
+}
