@@ -10,5 +10,9 @@ phases:
       - npm run webpack
 artifacts:  
   files:
-    - '**/*'
-    - 'dist/bundle.js' 
+    - index.html
+    - favicon.ico
+    - JJamesResume.docx
+    - styles/*
+    - images/*
+    - dist/bundle.js
