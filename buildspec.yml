@@ -8,7 +8,6 @@ phases:
     commands:
       - npm install
       - npm run webpack
-  artifacts:  
-    files:
-      - '**/*'
-      - dist/bundle.js     
+artifacts:  
+  files:
+    - '**/*' 
