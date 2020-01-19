@@ -13,6 +13,9 @@ artifacts:
     - index.html
     - favicon.ico
     - JJamesResume.docx
+    - style.css
     - styles/*
     - images/*
     - dist/bundle.js
+    - media/*
+    - src/*

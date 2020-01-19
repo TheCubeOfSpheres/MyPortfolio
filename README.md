@@ -1,11 +1,9 @@
 # Joseph James's portfolio
 
-This is my professional portfolio.  It uses AWS and ReactJS.
+This is my professional portfolio.
 
 ## Technologies Used
-Git and github
-SSH
-HTML
-CSS
-Font Awesome
-Google Fonts
+It is hosted on S3
+Sourced from github
+Deployed With AWS CodePipeline
+Built with Vanilla JS HTML CSS and HandleBars

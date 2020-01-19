@@ -1,7 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom'
 import ExampleWork from './example-work'
-
+import NavBar from './navbar'
+const navBarData = {
+	'links': {
+		'linkedIn': "https://www.linkedin.com/in/joseph-james-84a176172/",
+		'github': "https://github.com/TheCubeOfSpheres/",
+		'resume': "../JJamesResume.docx"
+	}
+}
 const myWork = [ 
 	{
 		'title': "Work Example",
@@ -37,3 +44,4 @@ const myWork = [
 ]
 
 ReactDOM.render(<ExampleWork work={myWork} />, document.getElementById('example-work'));
+ReactDOM.render(<NavBar data={navBarData} />, document.getElementById('navbar'));
