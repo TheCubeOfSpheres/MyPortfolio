@@ -19,7 +19,7 @@ var hover = new Audio("media/hover.wav");
 var targetDiv = document.getElementById('data');
 var hudDisplay = document.getElementById('hudDisplay').innerHTML;
 var hudDisplayTemplate = Handlebars.compile(hudDisplay);
-var bio = "I am a self-taught programmer and aspiring software engineer.  Over the last three years I learned the fundamental concepts of programming by studying JavaScript and related tools such as CSS, Node.js and HTML.  I expanded my skillset by becoming AWS Certified Solutions Architect and learning Python.   From my studies I came to understand, that with good process and communication, any code base can be systematically broken down into its simplest components, understood with precision, and then optimized for efficiency and expanded capability. "
+var bio = "I am a self-taught programmer and aspiring software engineer.  Over the last three years I learned the fundamental concepts of programming by studying JavaScript and related tools such as CSS, Node.js and HTML.  I expanded my skillset by becoming an AWS Certified Solutions Architect and learning Python.   From my studies I came to understand, that with good process and communication, any code base can be systematically broken down into its simplest components, understood with precision, and then optimized for efficiency and expanded capability. "
 
 var experienceData = {
 	isData: true,
@@ -63,28 +63,48 @@ function validateFormData() {
 		form.email.value="";
 		form.message.value="";
 	}
+	function submitToAPI(data) {
+	$.ajax({
+			type: "POST",
+	        url : "https://8sjjh1x1fe.execute-api.us-east-1.amazonaws.com/myPortfolio",
+	        dataType: "json",
+	        crossDomain: "true",
+	        contentType: "application/json; charset=utf-8",
+	        data: JSON.stringify(data),
+			success: function () {
+				// clear form and show a success message
+	        	alert("Your message has been sent");
+	        	clearForm()
+	       	},
+	        error: function () {
+	        	// show an error message
+	        	alert("Attempt to send message was unsuccessfull");
+	        }
+    	});
+	}	
 	if(formData.eMail.match(/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/) !== null && formData._id.match(/^(1?(-?\d{3})-?)?(\d{3})(-?\d{4})$/) !== null && formData.firstName.trim() !== '' && formData.lastName.trim() !== '') {
 		console.log(formData);
 
-		Email.send("thecubeofspheres@gmail.com",
-			formData.eMail,
-			"Your Contact Form Was Received By Joseph James - Software Engineer",
-			'Hi '+formData.firstName+'. Thank you for your interest, I will get back to you as soon as I get a chance to catch up on my e-mails.',
-			"smtp.elasticemail.com",
-			"thecubeofspheres@gmail.com",
-			"a562f2c9-9d99-4c1c-ac5c-d4e618a58280");
+		submitToAPI(formData)
+		// Email.send("thecubeofspheres@gmail.com",
+		// 	formData.eMail,
+		// 	"Your Contact Form Was Received By Joseph James - Software Engineer",
+		// 	'Hi '+formData.firstName+'. Thank you for your interest, I will get back to you as soon as I get a chance to catch up on my e-mails.',
+		// 	"smtp.elasticemail.com",
+		// 	"thecubeofspheres@gmail.com",
+		// 	"a562f2c9-9d99-4c1c-ac5c-d4e618a58280");
 		
-		Email.send("thecubeofspheres@gmail.com",
-			"theCubeOfSpheres@gmail.com",
-			"Inquiry from " +formData.firstName+' '+formData.lastName,
-			'Email: ' + formData.eMail + ' Tel: ' + formData._id + ' Message: ' + formData.message,
-			"smtp.elasticemail.com",
-			"thecubeofspheres@gmail.com",
-			"a562f2c9-9d99-4c1c-ac5c-d4e618a58280",
-			function done(message) { 
-				alert("Your message has been sent");
-				clearForm();
-		});
+		// Email.send("thecubeofspheres@gmail.com",
+		// 	"theCubeOfSpheres@gmail.com",
+		// 	"Inquiry from " +formData.firstName+' '+formData.lastName,
+		// 	'Email: ' + formData.eMail + ' Tel: ' + formData._id + ' Message: ' + formData.message,
+		// 	"smtp.elasticemail.com",
+		// 	"thecubeofspheres@gmail.com",
+		// 	"a562f2c9-9d99-4c1c-ac5c-d4e618a58280",
+		// 	function done(message) { 
+		// 		alert("Your message has been sent");
+		// 		clearForm();
+		// });
 
 	} else {
 		var enterFirst = 'Please enter your first name in the appropriate field \n'

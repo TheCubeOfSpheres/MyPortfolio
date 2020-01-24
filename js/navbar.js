@@ -6,7 +6,6 @@ class NavBar extends React.Component {
 			<div class="center">
         		<label class="panel"> Joseph James - Software Engineer | Email: TheCubeOfSpheres@gmail.com | Cell: 305-283-9503 | <a target='_blank' href="https://github.com/Jo7ephJames?tab=repositories">GitHub Link</a> </label> 
    				<ul className="section--social" className="navbar-nav">
-
 			        {/* Links to relevant professional social media & resume -->
 			            See: http://fontawesome.io/icons/#brand for more -->
 			        	Link to Linked In profile */}
